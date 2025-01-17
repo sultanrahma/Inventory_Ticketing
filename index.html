@@ -132,9 +132,9 @@
       </li><!-- End Inventory Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="Ticketing.html">
+        <a class="nav-link collapsed" href="Task.html">
           <i class="bi bi-grid"></i>
-          <span>Ticketing</span>
+          <span>Task</span>
         </a>
       </li><!-- End Ticketing Nav -->
 
@@ -168,12 +168,14 @@
                         <table class="table datatable">
                           <thead>
                             <tr>
-                              <th>Merchant</th>
-                              <th>Alamat</th>
-                              <th>Produk</th>
-                              <th>Nomor Perangkat</th>
-                              <th>Nomor Telepon</th>
+                              <th>Serial Number</th>
+                              <th>Product</th>
+                              <th>Company</th>
+                              <th>Refrence</th>
                               <th>Status</th>
+                              <th>Buffer status</th>
+                              <th>Asset Status</th>
+                              <th>Location</th>
                             </tr>
                           </thead>
                           <tbody id="table-body">
@@ -199,11 +201,14 @@
                   data.forEach(item => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                      <td>${item.name}</td>
-                      <td>${item.ext}</td>
-                      <td>${item.city}</td>
-                      <td>${item.start_date}</td>
-                      <td>${item.completion}%</td>
+                      <td>${item.Serial_Number}</td>
+                      <td>${item.Product}</td>
+                      <td>${item.Company}</td>
+                      <td>${item.Refrence}</td>
+                      <td>${item.Status}%</td>
+                      <td>${item.Buffer_Status}%</td>
+                      <td>${item.Asset_Status}%</td>
+                      <td>${item.Location}%</td>
                     `;
                     tableBody.appendChild(row);
                   });
